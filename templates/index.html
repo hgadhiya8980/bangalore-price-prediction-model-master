@@ -1,0 +1,174 @@
+<html>
+    <head>
+        <title>house-price predication model</title>
+        <style>
+            *{
+                margin: 0;
+                padding: 0;
+                font-family: Arial, Helvetica, sans-serif;
+            }
+            .image-1
+            {
+                width: 100%;
+                height: 400px;
+            }
+            .heading{
+                min-height: 60px;
+                background-color: #333;
+                border-radius: 30px;
+            }
+            .heading h1{
+                font-size: 30px;
+                font-weight: bold;
+                padding: 20px;
+                font-family: sans-serif;
+                color: white;
+                text-align: center;
+
+            }
+            .from-sec
+            {
+                background-color: #777;
+                height: 450px;
+            }
+            .pred
+            {
+                padding-top: 80px;
+            }
+            input[type="text"]
+            {
+                border: none;
+                padding: 10px;
+                width: 250px;
+                margin-right: 5px;
+                margin-bottom: 4px;
+
+            }
+            .btn
+            {
+                margin-top: 50px;
+            }
+            input[type="submit"]
+            {
+                color: white;
+                background-color: #333;
+                font-size: 20px;
+                font-weight: bold;
+                letter-spacing: 1px;
+                border: none;
+                height: 50px;
+                width: 150px;
+                border-radius: 50px;
+                padding: 10px;
+                margin-bottom: 40px;
+            }
+            input[type="submit"]:hover
+            {
+                background-color: rgb(255, 93, 93);
+                font-weight: bold;
+            }
+            .from-sec h1{
+                color: white;
+                font-size: 30px;
+            }
+            .Houseavaliability
+            {
+                border: none;
+                padding: 10px;
+                width: 250px;
+                margin-right: 5px;
+                margin-bottom: 4px;
+            }
+            .Houselocation
+            {
+                border: none;
+                padding: 10px;
+                width: 250px;
+                margin-right: 5px;
+                margin-bottom: 4px;
+            }
+            .Areatype
+            {
+                border: none;
+                padding: 10px;
+                width: 250px;
+                margin-right: 5px;
+                margin-bottom: 4px;
+            }
+            .footer h3{
+                background-color: #333;
+                color: white;
+                text-align: center;
+                padding: 20px;
+                font-size: 25px;
+                font-weight: bold;
+                font-family: sans-serif;
+            }
+        </style>
+    </head>
+    <body>
+        <div class="header">
+            <div class="images">
+                <img src="static\images\house-banner.jpg" class="image-1">
+            </div>
+        </div>
+        <div class="container">
+            <div class="heading">
+                <h1>house-price predication model</h1>
+            </div>
+        </div>
+        <div class="from-sec">
+            <center>
+                <form name="prediction" action="/predict" method="POST" class="pred">
+                <input type="text" placeholder="Bathrooms" name="Bathrooms">
+                <input type="text" placeholder="Balcony" name="Balcony">
+                <input type="text" placeholder="Total Squre Foot" name="Total_Squre_Foot">
+                <input type="text" placeholder="BHK" name="BHK"><br>
+                <input type="text" placeholder="Price Per Squre Foot" name="Price_Per_Squre_Foot">
+                <select class="Houseavaliability" name="House_Avaliability">
+                    <option>Ready To Move</option>
+                </select>
+                <select class="Houselocation" name="House_Location">
+                    <option>Whitefield</option>
+                    <option>Sarjapur Road</option>
+                    <option>Electronic City</option>
+                    <option>Kanakpura Road</option>
+                    <option>Yelahanka</option>
+                    <option>Uttarahalli</option>
+                    <option>Thanisandra</option>
+                    <option>Marathahalli</option>
+                    <option>Bannerghatta Road</option>
+                    <option>Raja Rajeshwari Nagar</option>
+                    <option>9th Phase JP Nagar</option>
+                    <option>Tumkur Road</option>
+                    <option>Horamavu Banaswadi</option>
+                    <option>Kalena Agrahara</option>
+                    <option>Kammasandra</option>
+                    <option>Iblur Village</option>
+                    <option>Chikkalasandra</option>
+                    <option>Babusapalaya</option>
+                    <option>Gunjur</option>
+                    <option>Seegehalli</option>
+                </select>
+                <select class="Areatype" name="Area_Type">
+                    <option>Super built-up Area</option>
+                    <option>Built-up Area</option>
+                    <option>Plot Area</option>
+                    <option>Carpet Area</option>
+                </select>
+                <div class="btn">
+                    <input type="submit" class="submit" value="Predict">
+                </div>
+                <div>
+                    <h1> {{ prediction_text }}</h1>
+                </div>
+            </form></center>
+        </div>
+        <div class="footer">
+            <h3>
+                Delivery Contact:
+                hgadhiya8980@gmail.com
+            </h3>
+        </div>
+    </body>
+</html>
